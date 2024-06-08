@@ -4,7 +4,10 @@ public class DrawElipse {
   private Pixel pixel;
 
   public DrawElipse(int windowWidth, int windowHeight) {
-    pixel = new Pixel(windowWidth, windowHeight);
+    if (pixel == null) {
+      pixel = new Pixel(windowWidth, windowHeight);
+    }
+    pixel.showWindow();
   }
 
   public void drawElipse(int centerX, int centerY, int radiusX, int radiusY) {
@@ -46,10 +49,10 @@ public class DrawElipse {
   }
 
   private void plotPoints(int centerX, int centerY, int x, int y) {
-    pixel.putPixel(centerX + x, centerY + y, Color.WHITE);
-    pixel.putPixel(centerX - x, centerY + y, Color.WHITE);
-    pixel.putPixel(centerX + x, centerY - y, Color.WHITE);
-    pixel.putPixel(centerX - x, centerY - y, Color.WHITE);
+    pixel.putPixel(centerX + x, centerY + y, Color.BLACK);
+    pixel.putPixel(centerX - x, centerY + y, Color.BLACK);
+    pixel.putPixel(centerX + x, centerY - y, Color.BLACK);
+    pixel.putPixel(centerX - x, centerY - y, Color.BLACK);
   }
 
   public static void main(String[] args) {

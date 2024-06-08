@@ -4,7 +4,10 @@ public class DrawCirclePM {
   private Pixel pixel;
 
   public DrawCirclePM(int windowWidth, int windowHeight) {
-    pixel = new Pixel(windowWidth, windowHeight);
+    if (pixel == null) {
+      pixel = new Pixel(windowWidth, windowHeight);
+    }
+    pixel.showWindow();
   }
 
   public void drawCircle(int centerX, int centerY, int radius) {
@@ -27,14 +30,14 @@ public class DrawCirclePM {
   }
 
   private void drawCirclePoints(int centerX, int centerY, int x, int y) {
-    pixel.putPixel(centerX + x, centerY + y, Color.WHITE);
-    pixel.putPixel(centerX - x, centerY + y, Color.WHITE);
-    pixel.putPixel(centerX + x, centerY - y, Color.WHITE);
-    pixel.putPixel(centerX - x, centerY - y, Color.WHITE);
-    pixel.putPixel(centerX + y, centerY + x, Color.WHITE);
-    pixel.putPixel(centerX - y, centerY + x, Color.WHITE);
-    pixel.putPixel(centerX + y, centerY - x, Color.WHITE);
-    pixel.putPixel(centerX - y, centerY - x, Color.WHITE);
+    pixel.putPixel(centerX + x, centerY + y, Color.BLUE);
+    pixel.putPixel(centerX - x, centerY + y, Color.BLUE);
+    pixel.putPixel(centerX + x, centerY - y, Color.BLUE);
+    pixel.putPixel(centerX - x, centerY - y, Color.BLUE);
+    pixel.putPixel(centerX + y, centerY + x, Color.BLUE);
+    pixel.putPixel(centerX - y, centerY + x, Color.BLUE);
+    pixel.putPixel(centerX + y, centerY - x, Color.BLUE);
+    pixel.putPixel(centerX - y, centerY - x, Color.BLUE);
   }
 
   public static void main(String[] args) {

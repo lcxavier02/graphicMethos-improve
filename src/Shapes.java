@@ -44,15 +44,15 @@ public class Shapes {
     shapes.drawElipse(150, 300, 35, 35);
     shapes.drawElipse(150, 300, 60, 60);
     shapes.drawElipse(150, 300, 90, 90);
-    shapes.putPixel(150, 300, Color.WHITE);
-    shapes.putPixel(137, 287, Color.WHITE);
-    shapes.putPixel(163, 313, Color.WHITE);
-    shapes.putPixel(117, 267, Color.WHITE);
-    shapes.putPixel(183, 333, Color.WHITE);
-    shapes.putPixel(90, 240, Color.WHITE);
-    shapes.putPixel(210, 360, Color.WHITE);
-    shapes.putPixel(65, 215, Color.WHITE);
-    shapes.putPixel(235, 385, Color.WHITE);
+    shapes.putPixel(150, 300, Color.BLACK);
+    shapes.putPixel(137, 287, Color.BLACK);
+    shapes.putPixel(163, 313, Color.BLACK);
+    shapes.putPixel(117, 267, Color.BLACK);
+    shapes.putPixel(183, 333, Color.BLACK);
+    shapes.putPixel(90, 240, Color.BLACK);
+    shapes.putPixel(210, 360, Color.BLACK);
+    shapes.putPixel(65, 215, Color.BLACK);
+    shapes.putPixel(235, 385, Color.BLACK);
 
     shapes.drawRectangle(300, 300, 480, 400);
     shapes.drawRectangle(455, 375, 325, 325);
@@ -61,14 +61,14 @@ public class Shapes {
     shapes.drawElipse(370, 530, 90, 30);
     shapes.drawElipse(370, 530, 110, 50);
     shapes.drawElipse(370, 530, 130, 70);
-    shapes.putPixel(300, 520, Color.WHITE);
-    shapes.putPixel(285, 505, Color.WHITE);
-    shapes.putPixel(265, 485, Color.WHITE);
-    shapes.putPixel(250, 470, Color.WHITE);
-    shapes.putPixel(440, 540, Color.WHITE);
-    shapes.putPixel(455, 555, Color.WHITE);
-    shapes.putPixel(476, 576, Color.WHITE);
-    shapes.putPixel(490, 590, Color.WHITE);
+    shapes.putPixel(300, 520, Color.BLACK);
+    shapes.putPixel(285, 505, Color.BLACK);
+    shapes.putPixel(265, 485, Color.BLACK);
+    shapes.putPixel(250, 470, Color.BLACK);
+    shapes.putPixel(440, 540, Color.BLACK);
+    shapes.putPixel(455, 555, Color.BLACK);
+    shapes.putPixel(476, 576, Color.BLACK);
+    shapes.putPixel(490, 590, Color.BLACK);
     shapes.showWindow();
   }
 }

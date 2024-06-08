@@ -56,15 +56,15 @@ public class ElipseStroke {
 
   private void plotPoints(int centerX, int centerY, int x, int y, int lineWidth) {
     for (int i = 0; i < lineWidth; i++) {
-      pixel.putPixel(centerX + x + i, centerY + y, Color.WHITE);
-      pixel.putPixel(centerX - x - i, centerY + y, Color.WHITE);
-      pixel.putPixel(centerX + x + i, centerY - y, Color.WHITE);
-      pixel.putPixel(centerX - x - i, centerY - y, Color.WHITE);
+      pixel.putPixel(centerX + x + i, centerY + y, Color.BLACK);
+      pixel.putPixel(centerX - x - i, centerY + y, Color.BLACK);
+      pixel.putPixel(centerX + x + i, centerY - y, Color.BLACK);
+      pixel.putPixel(centerX - x - i, centerY - y, Color.BLACK);
 
-      pixel.putPixel(centerX + x, centerY + y + i, Color.WHITE);
-      pixel.putPixel(centerX - x, centerY + y + i, Color.WHITE);
-      pixel.putPixel(centerX + x, centerY - y - i, Color.WHITE);
-      pixel.putPixel(centerX - x, centerY - y - i, Color.WHITE);
+      pixel.putPixel(centerX + x, centerY + y + i, Color.BLACK);
+      pixel.putPixel(centerX - x, centerY + y + i, Color.BLACK);
+      pixel.putPixel(centerX + x, centerY - y - i, Color.BLACK);
+      pixel.putPixel(centerX - x, centerY - y - i, Color.BLACK);
     }
   }
 

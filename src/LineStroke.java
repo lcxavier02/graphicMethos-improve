@@ -67,14 +67,14 @@ public class LineStroke {
     pixel.putPixel(x, y, Color.WHITE);
 
     for (int i = 1; i < lineWidth; i++) {
-      pixel.putPixel(x + i, y, Color.WHITE);
-      pixel.putPixel(x, y + i, Color.WHITE);
+      pixel.putPixel(x + i, y, Color.BLACK);
+      pixel.putPixel(x, y + i, Color.BLACK);
     }
   }
 
   public static void main(String[] args) {
     LineStroke ls = new LineStroke(300, 300);
-    ls.setLineWidth(3);
-    ls.drawLineWithThickness(120, 100, 120, 240);
+    ls.setLineWidth(4);
+    ls.drawLineWithThickness(120, 100, 160, 240);
   }
 }

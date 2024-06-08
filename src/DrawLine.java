@@ -4,7 +4,10 @@ public class DrawLine {
   private Pixel pixel;
 
   public DrawLine(int windowWidth, int windowHeight) {
-    pixel = new Pixel(windowWidth, windowHeight);
+    if (pixel == null) {
+      pixel = new Pixel(windowWidth, windowHeight);
+    }
+    pixel.showWindow();
   }
 
   public void drawLine(int x1, int y1, int x2, int y2) {
@@ -13,12 +16,12 @@ public class DrawLine {
 
     for (int x = x1; x <= x2; x++) {
       int y = (int) (m * x + b);
-      pixel.putPixel(x, (int) y, Color.WHITE);
+      pixel.putPixel(x, (int) y, Color.BLACK);
     }
   }
 
   public static void main(String[] args) {
     DrawLine dl = new DrawLine(300, 300);
-    dl.drawLine(50, 75, 90, 260);
+    dl.drawLine(50, 75, 100, 260);
   }
 }

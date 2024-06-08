@@ -151,7 +151,7 @@ public class CircleClip extends JFrame {
   public static void main(String[] args) {
     CircleClip circle = new CircleClip();
     circle.clipAndDrawCircle(400, 300, 200, Color.RED);
-    circle.clipAndDrawCircle(250, 250, 100, Color.BLUE);
+    circle.clipAndDrawCircle(250, 250, 100, Color.CYAN);
     circle.clipAndDrawCircle(600, 150, 120, Color.GREEN);
     circle.clipAndDrawCircle(100, 100, 120, Color.BLACK);
     circle.clipAndDrawCircle(100, 500, 150, Color.MAGENTA);

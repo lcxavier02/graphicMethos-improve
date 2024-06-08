@@ -152,5 +152,6 @@ public class LineCut extends JFrame {
     cut.clipAndDrawLine(90, 90, 350, 250, Color.GREEN);
     cut.clipAndDrawLine(300, 50, 300, 600, Color.BLACK);
     cut.clipAndDrawLine(50, 250, 300, 600, Color.MAGENTA);
+    cut.clipAndDrawLine(390, 560, 499, 10, Color.LIGHT_GRAY);
   }
 }

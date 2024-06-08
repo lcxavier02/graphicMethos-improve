@@ -4,7 +4,10 @@ public class DrawLineDDA {
   private Pixel pixel;
 
   public DrawLineDDA(int windowWidth, int windowHeight) {
-    pixel = new Pixel(windowWidth, windowHeight);
+    if (pixel == null) {
+      pixel = new Pixel(windowWidth, windowHeight);
+    }
+    pixel.showWindow();
   }
 
   public void drawLine(int x1, int y1, int x2, int y2) {
@@ -18,16 +21,16 @@ public class DrawLineDDA {
     double x = x1;
     double y = y1;
 
-    pixel.putPixel((int) Math.round(x), (int) Math.round(y), Color.WHITE);
+    pixel.putPixel((int) Math.round(x), (int) Math.round(y), Color.BLACK);
     for (int i = 0; i < steps; i++) {
       x += xIncremnt;
       y += yIncremnt;
-      pixel.putPixel((int) Math.round(x), (int) Math.round(y), Color.WHITE);
+      pixel.putPixel((int) Math.round(x), (int) Math.round(y), Color.BLACK);
     }
   }
 
   public static void main(String[] args) {
     DrawLineDDA dl = new DrawLineDDA(300, 300);
-    dl.drawLine(50, 75, 90, 260);
+    dl.drawLine(50, 75, 100, 260);
   }
 }

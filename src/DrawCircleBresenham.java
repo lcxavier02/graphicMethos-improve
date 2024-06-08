@@ -4,7 +4,10 @@ public class DrawCircleBresenham {
   private Pixel pixel;
 
   public DrawCircleBresenham(int windowWidth, int windowHeight) {
-    pixel = new Pixel(windowWidth, windowHeight);
+    if (pixel == null) {
+      pixel = new Pixel(windowWidth, windowHeight);
+    }
+    pixel.showWindow();
   }
 
   public void drawCircle(int centerX, int centerY, int radius) {
@@ -27,14 +30,14 @@ public class DrawCircleBresenham {
   }
 
   public void drawCirclePoints(int centerX, int centerY, int x, int y) {
-    pixel.putPixel(centerX + x, centerY + y, Color.WHITE);
-    pixel.putPixel(centerX - x, centerY + y, Color.WHITE);
-    pixel.putPixel(centerX + x, centerY - y, Color.WHITE);
-    pixel.putPixel(centerX - x, centerY - y, Color.WHITE);
-    pixel.putPixel(centerX + y, centerY + x, Color.WHITE);
-    pixel.putPixel(centerX - y, centerY + x, Color.WHITE);
-    pixel.putPixel(centerX + y, centerY - x, Color.WHITE);
-    pixel.putPixel(centerX - y, centerY - x, Color.WHITE);
+    pixel.putPixel(centerX + x, centerY + y, Color.RED);
+    pixel.putPixel(centerX - x, centerY + y, Color.RED);
+    pixel.putPixel(centerX + x, centerY - y, Color.RED);
+    pixel.putPixel(centerX - x, centerY - y, Color.RED);
+    pixel.putPixel(centerX + y, centerY + x, Color.RED);
+    pixel.putPixel(centerX - y, centerY + x, Color.RED);
+    pixel.putPixel(centerX + y, centerY - x, Color.RED);
+    pixel.putPixel(centerX - y, centerY - x, Color.RED);
   }
 
   public static void main(String[] args) {

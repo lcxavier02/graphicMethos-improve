@@ -27,7 +27,7 @@ public class LineMasquerade {
 
     int pk;
 
-    pixel.putPixel(x, y, Color.WHITE);
+    pixel.putPixel(x, y, Color.BLACK);
 
     int maskIndex = 0;
 
@@ -43,7 +43,7 @@ public class LineMasquerade {
           pk = pk + A;
         }
         if (mask.charAt(maskIndex) == '1') {
-          pixel.putPixel(x, y, Color.WHITE);
+          pixel.putPixel(x, y, Color.BLACK);
         }
         maskIndex = (maskIndex + 1) % mask.length();
       }
@@ -59,7 +59,7 @@ public class LineMasquerade {
           pk = pk + C;
         }
         if (mask.charAt(maskIndex) == '1') {
-          pixel.putPixel(x, y, Color.WHITE);
+          pixel.putPixel(x, y, Color.BLACK);
         }
         maskIndex = (maskIndex + 1) % mask.length();
       }
@@ -68,6 +68,6 @@ public class LineMasquerade {
 
   public static void main(String[] args) {
     LineMasquerade lm = new LineMasquerade(300, 300);
-    lm.drawLineWithMask(100, 40, 160, 220, "1111110");
+    lm.drawLineWithMask(100, 40, 160, 220, "1110000");
   }
 }

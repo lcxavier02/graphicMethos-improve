@@ -4,7 +4,10 @@ public class DrawLinePM {
   private Pixel pixel;
 
   public DrawLinePM(int windowWidth, int windowHeight) {
-    pixel = new Pixel(windowWidth, windowHeight);
+    if (pixel == null) {
+      pixel = new Pixel(windowWidth, windowHeight);
+    }
+    pixel.showWindow();
   }
 
   public void drawLine(int x1, int y1, int x2, int y2) {
@@ -14,7 +17,7 @@ public class DrawLinePM {
     int e2;
 
     while (true) {
-      pixel.putPixel(x1, y1, Color.WHITE);
+      pixel.putPixel(x1, y1, Color.RED);
 
       if (x1 == x2 && y1 == y2) {
         break;

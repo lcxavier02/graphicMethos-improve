@@ -12,6 +12,9 @@ public class Pixel extends JFrame {
   public Pixel(int windowWidth, int windowHeight) {
     buffer = new BufferedImage(windowWidth, windowHeight, BufferedImage.TYPE_INT_RGB);
     graphsPixel = buffer.createGraphics();
+    graphsPixel.setColor(Color.WHITE);
+    graphsPixel.fillRect(0, 0, windowWidth, windowHeight);
+    graphsPixel.dispose();
     paintedPixels = new HashMap<>();
 
     setSize(windowWidth, windowHeight);

@@ -4,7 +4,10 @@ public class DrawCircle {
   private Pixel pixel;
 
   public DrawCircle(int windowWidth, int windowHeight) {
-    pixel = new Pixel(windowWidth, windowHeight);
+    if (pixel == null) {
+      pixel = new Pixel(windowWidth, windowHeight);
+    }
+    pixel.showWindow();
   }
 
   public void drawCircle(int centerX, int centerY, int radius) {
@@ -13,10 +16,10 @@ public class DrawCircle {
 
     for (int x = minX; x <= maxX; x++) {
       int y = centerY + (int) Math.sqrt((Math.pow(radius, 2) - (Math.pow((x - centerX), 2))));
-      pixel.putPixel(x, y, Color.WHITE);
+      pixel.putPixel(x, y, Color.BLACK);
 
       y = centerY - (int) Math.sqrt((Math.pow(radius, 2) - (Math.pow((x - centerX), 2))));
-      pixel.putPixel(x, y, Color.WHITE);
+      pixel.putPixel(x, y, Color.BLACK);
     }
   }
 

@@ -14,6 +14,6 @@ public class DrawRectangle {
 
   public static void main(String[] args) {
     DrawRectangle dr = new DrawRectangle(500, 500);
-    dr.drawRectangle(350, 350, 430, 400);
+    dr.drawRectangle(150, 280, 430, 400);
   }
 }

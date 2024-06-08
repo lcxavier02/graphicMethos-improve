@@ -59,14 +59,14 @@ public class ElipseMasquerade {
   }
 
   private void plotPoints(int centerX, int centerY, int x, int y) {
-    pixel.putPixel(centerX + x, centerY + y, Color.WHITE);
-    pixel.putPixel(centerX - x, centerY + y, Color.WHITE);
-    pixel.putPixel(centerX + x, centerY - y, Color.WHITE);
-    pixel.putPixel(centerX - x, centerY - y, Color.WHITE);
+    pixel.putPixel(centerX + x, centerY + y, Color.MAGENTA);
+    pixel.putPixel(centerX - x, centerY + y, Color.MAGENTA);
+    pixel.putPixel(centerX + x, centerY - y, Color.MAGENTA);
+    pixel.putPixel(centerX - x, centerY - y, Color.MAGENTA);
   }
 
   public static void main(String[] args) {
-    ElipseMasquerade em = new ElipseMasquerade(300, 300, "1110000");
+    ElipseMasquerade em = new ElipseMasquerade(300, 300, "1100000");
     em.drawElipse(150, 150, 80, 80);
   }
 }

@@ -7,6 +7,7 @@ public class DrawLineBresenham {
     if (pixel == null) {
       pixel = new Pixel(windowWidth, windowHeight);
     }
+    pixel.showWindow();
   }
 
   public void drawLine(int x1, int y1, int x2, int y2) {
@@ -26,7 +27,7 @@ public class DrawLineBresenham {
 
     int pk;
 
-    pixel.putPixel(x, y, Color.WHITE);
+    pixel.putPixel(x, y, Color.BLACK);
 
     if (dx > dy) {
       pk = 2 * dy - dx;
@@ -39,7 +40,7 @@ public class DrawLineBresenham {
           x = x + xi;
           pk = pk + A;
         }
-        pixel.putPixel(x, y, Color.WHITE);
+        pixel.putPixel(x, y, Color.BLACK);
       }
     } else {
       pk = 2 * dx - dy;
@@ -52,13 +53,13 @@ public class DrawLineBresenham {
           y = y + yi;
           pk = pk + C;
         }
-        pixel.putPixel(x, y, Color.WHITE);
+        pixel.putPixel(x, y, Color.BLACK);
       }
     }
   }
 
   public static void main(String[] args) {
     DrawLineBresenham dl = new DrawLineBresenham(300, 300);
-    dl.drawLine(150, 40, 140, 120);
+    dl.drawLine(50, 75, 100, 260);
   }
 }

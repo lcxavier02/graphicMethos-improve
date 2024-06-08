@@ -4,7 +4,10 @@ public class DrawCircleOL {
   private Pixel pixel;
 
   public DrawCircleOL(int windowWidth, int windowHeight) {
-    pixel = new Pixel(windowWidth, windowHeight);
+    if (pixel == null) {
+      pixel = new Pixel(windowWidth, windowHeight);
+    }
+    pixel.showWindow();
   }
 
   public void drawCircle(int centerX, int centerY, int radius) {
@@ -28,14 +31,14 @@ public class DrawCircleOL {
   }
 
   private void drawOctant(int centerX, int centerY, int x, int y) {
-    pixel.putPixel(centerX + x, centerY + y, Color.WHITE);
-    pixel.putPixel(centerX - x, centerY + y, Color.WHITE);
-    pixel.putPixel(centerX + x, centerY - y, Color.WHITE);
-    pixel.putPixel(centerX - x, centerY - y, Color.WHITE);
-    pixel.putPixel(centerX + y, centerY + x, Color.WHITE);
-    pixel.putPixel(centerX - y, centerY + x, Color.WHITE);
-    pixel.putPixel(centerX + y, centerY - x, Color.WHITE);
-    pixel.putPixel(centerX - y, centerY - x, Color.WHITE);
+    pixel.putPixel(centerX + x, centerY + y, Color.GREEN);
+    pixel.putPixel(centerX - x, centerY + y, Color.GREEN);
+    pixel.putPixel(centerX + x, centerY - y, Color.GREEN);
+    pixel.putPixel(centerX - x, centerY - y, Color.GREEN);
+    pixel.putPixel(centerX + y, centerY + x, Color.GREEN);
+    pixel.putPixel(centerX - y, centerY + x, Color.GREEN);
+    pixel.putPixel(centerX + y, centerY - x, Color.GREEN);
+    pixel.putPixel(centerX - y, centerY - x, Color.GREEN);
   }
 
   public static void main(String[] args) {
